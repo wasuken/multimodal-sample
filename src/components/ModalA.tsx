@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Dialog, AppBar, Toolbar, IconButton, Typography, Button, TextField } from '@mui/material';
+import {
+  Dialog,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  TextField,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ModalB from './ModalB';
 
@@ -22,7 +30,12 @@ const ModalA: React.FC<ModalAProps> = ({ open, onClose, onSave }) => {
     <Dialog fullScreen open={open} onClose={onClose}>
       <AppBar sx={{ position: 'relative' }}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" onClick={onClose} aria-label="close">
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={onClose}
+            aria-label="close"
+          >
             <CloseIcon />
           </IconButton>
           <Typography sx={{ flex: 1 }} variant="h6" component="div">
@@ -41,7 +54,11 @@ const ModalA: React.FC<ModalAProps> = ({ open, onClose, onSave }) => {
         <Button variant="contained" onClick={() => setModalBOpen(true)}>
           Open Modal B
         </Button>
-        <ModalB open={modalBOpen} onClose={() => setModalBOpen(false)} onSave={handleModalBClose} />
+        <ModalB
+          open={modalBOpen}
+          onClose={() => setModalBOpen(false)}
+          onSave={handleModalBClose}
+        />
       </div>
       <div style={{ position: 'absolute', bottom: 16, right: 16 }}>
         <Button variant="contained" onClick={() => onSave(inputA)}>

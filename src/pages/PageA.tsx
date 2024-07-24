@@ -22,7 +22,11 @@ const PageA: React.FC = () => {
         Open Modal A
       </Button>
       <Typography variant="h6">Saved Data: {savedData}</Typography>
-      <ModalA open={modalAOpen} onClose={handleModalAClose} onSave={handleModalASave} />
+      <ModalA
+        open={modalAOpen}
+        onClose={handleModalAClose}
+        onSave={handleModalASave}
+      />
     </Container>
   );
 };

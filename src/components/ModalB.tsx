@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Dialog, AppBar, Toolbar, IconButton, Typography, Button, TextField } from '@mui/material';
+import {
+  Dialog,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  TextField,
+} from '@mui/material';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
@@ -16,7 +24,12 @@ const ModalB: React.FC<ModalBProps> = ({ open, onClose, onSave }) => {
     <Dialog fullScreen open={open} onClose={onClose}>
       <AppBar sx={{ position: 'relative' }}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" onClick={onClose} aria-label="close">
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={onClose}
+            aria-label="close"
+          >
             <ArrowBackIcon />
           </IconButton>
           <Typography sx={{ flex: 1 }} variant="h6" component="div">
